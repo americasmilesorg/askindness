@@ -260,7 +260,7 @@ def show_footer():
     </style>
 
     <div class="footer">
-        © 2026 Westport Smiles. All rights reserved |
+        © 2026 America Smiles. All rights reserved |
         <a href="?page=legal">Legal Disclaimer</a> |
         Contact us:
         <a href="mailto:info@americasmiles.org">
