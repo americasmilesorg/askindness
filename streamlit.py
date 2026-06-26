@@ -494,6 +494,7 @@ This website is currently in **Beta** and serves as an experimental platform for
 To help us build bridges and generate smiles more efficiently, we utilize various third-party artificial intelligence and web technologies, including tools provided by **OpenAI, Google, and Streamlit**.
 
 Our AI is designed to be helpful, but it isn't perfect and may make mistakes. We encourage you to use your own judgment and verify facts independently.
+
 ---
 
 ### 🔍 Transparency & Independent Policy
