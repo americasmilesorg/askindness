@@ -582,6 +582,20 @@ header[data-testid="stHeader"] {
 [data-testid="stMain"] p {
     color: #1a1a1a !important;
 }
+
+/* Restore button text to Streamlit theme color (white in dark mode, dark in light mode)
+   so button labels stay visible regardless of which theme is active */
+[data-testid="stMain"] button p,
+[data-testid="stMain"] button span,
+[data-testid="stMain"] button div,
+[data-testid="stMain"] [data-testid="stBaseButton-secondary"] p,
+[data-testid="stMain"] [data-testid="stBaseButton-secondary"] span,
+[data-testid="stMain"] [data-testid="stBaseButton-primary"] p,
+[data-testid="stMain"] [data-testid="stBaseButton-primary"] span,
+[data-testid="stMain"] [data-testid="stFileUploaderButton"] p,
+[data-testid="stMain"] [data-testid="stFileUploaderButton"] span {
+    color: var(--text-color) !important;
+}
 </style>
 """, unsafe_allow_html=True)
 
