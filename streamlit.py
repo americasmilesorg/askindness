@@ -670,15 +670,17 @@ components.html(f"""
 </script>
 """, height=80)
 
-st.markdown("### A Kindness Project : See an Object, Spark a Connection!")
-st.write(
-    "Join us—Lisette, Leonie, and Professor Juju—as we use AI to fight the loneliness epidemic "
-    "by turning everyday objects into sparks for human connection. Our mission is to help everyone, "
-    "from kids to seniors, break down barriers and \"Be Best\" through small acts of kindness that "
-    "foster a healthier community. We invite you to explore our project, where we merge technology "
-    "with real-world interaction to ensure no one has to feel like they are on a \"lonely island\" anymore."
-)
-st.write("Upload or take a photo of an object")
+st.markdown("""
+<h3 style='color:#1a1a1a !important;'>A Kindness Project : See an Object, Spark a Connection!</h3>
+<p style='color:#333333 !important;font-size:15px;line-height:1.7;'>
+Join us&#8212;Lisette, Leonie, and Professor Juju&#8212;as we use AI to fight the loneliness epidemic
+by turning everyday objects into sparks for human connection. Our mission is to help everyone,
+from kids to seniors, break down barriers and &#34;Be Best&#34; through small acts of kindness that
+foster a healthier community. We invite you to explore our project, where we merge technology
+with real-world interaction to ensure no one has to feel like they are on a &#34;lonely island&#34; anymore.
+</p>
+<p style='color:#333333 !important;font-size:15px;'>Upload or take a photo of an object</p>
+""", unsafe_allow_html=True)
 st.markdown("""
 <style>
 [data-testid="stFileUploaderDropzone"] {
@@ -694,7 +696,7 @@ st.markdown("""
     display: none !important;
 }
 </style>
-<p style='margin:0 0 4px 0;font-size:16px;font-weight:400;color:#222;'>Choose image source</p>
+<p style='margin:0 0 4px 0;font-size:16px;font-weight:400;color:#1a1a1a !important;'>Choose image source</p>
 """, unsafe_allow_html=True)
 
 # ---------- INPUT MODE ----------
