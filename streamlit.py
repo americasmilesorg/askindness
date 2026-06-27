@@ -546,7 +546,7 @@ for key, default in [
     if key not in st.session_state:
         st.session_state[key] = default
 
-# ---------- BACKGROUND COLORS ----------
+# ---------- BACKGROUND COLORS + DARK MODE TEXT FIX ----------
 st.markdown("""
 <style>
 [data-testid="stSidebar"] {
@@ -562,6 +562,25 @@ section.main,
 [data-testid="stToolbar"],
 header[data-testid="stHeader"] {
     background-color: #FFFFFF !important;
+}
+
+/* Force all main content text to dark so it stays readable
+   regardless of Streamlit's Light / Dark / System theme on mobile */
+[data-testid="stMain"] [data-testid="stMarkdownContainer"] h1,
+[data-testid="stMain"] [data-testid="stMarkdownContainer"] h2,
+[data-testid="stMain"] [data-testid="stMarkdownContainer"] h3,
+[data-testid="stMain"] [data-testid="stMarkdownContainer"] h4,
+[data-testid="stMain"] [data-testid="stMarkdownContainer"] p,
+[data-testid="stMain"] [data-testid="stMarkdownContainer"] li,
+[data-testid="stMain"] [data-testid="stMarkdownContainer"] span,
+[data-testid="stMain"] [data-testid="stMarkdownContainer"] label,
+[data-testid="stMain"] [data-testid="stText"],
+[data-testid="stMain"] [data-testid="stSubheader"],
+[data-testid="stMain"] [data-testid="stHeading"],
+[data-testid="stMain"] label[data-testid="stWidgetLabel"],
+[data-testid="stMain"] .stRadio label,
+[data-testid="stMain"] p {
+    color: #1a1a1a !important;
 }
 </style>
 """, unsafe_allow_html=True)
@@ -817,9 +836,9 @@ if "ideas_list" in st.session_state and "object_name" in st.session_state:
                 # Four action buttons side by side
                 col_a, col_b, col_c, col_d = st.columns(4)
                 with col_a:
-                    buy_online  = st.button("🛒 purchase Online",   key=f"buy_online_{i}",  use_container_width=True)
+                    buy_online  = st.button("🛒 Purchase Online",   key=f"buy_online_{i}",  use_container_width=True)
                 with col_b:
-                    buy_offline = st.button("🏪 purchase Offline",  key=f"buy_offline_{i}", use_container_width=True)
+                    buy_offline = st.button("🏪 Purchase Offline",  key=f"buy_offline_{i}", use_container_width=True)
                 with col_c:
                     share_msg   = st.button("📤 Share kindness",     key=f"share_{i}",       use_container_width=True)
                 with col_d:
